@@ -4,6 +4,13 @@
     "dependencies": {
         "angular": "1.2.16"
     },
+    "authors": [
+        { "name": "Jiří Špác", "email": "capajj@gmail.com" }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/capaj/ppvn-angular.git"
+    },
     "devDependencies": {
         "angular-mocks": "1.2.16"
     },

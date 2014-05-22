@@ -6,7 +6,7 @@
     "description": "syntactic sugar angular directives for PerspectivePageViewNavigation",
     "repository": {
         "type": "git",
-        "url": "https://github.com/capaj/ng-tools.git"
+        "url": "https://github.com/capaj/ppvn-angular.git"
     },
     "keywords": [
         "angular",
