@@ -1,9 +1,4 @@
-.transition-delay (@time: 0.4s) {
-    -webkit-transition-delay: @time;
-    -moz-transition-delay: @time;
-    -o-transition-delay: @time;
-    transition-delay: @time;
-}
+@import "less-hat";
 
 .child-increasing-transition-delay(@from, @to, @delay, @dOffset) when (@to >= @from) {
     .child-increasing-transition-delay(@from + 1, @to, @delay, @dOffset);    // next iteration
@@ -28,8 +23,7 @@ html, body, .perspective {
     position: relative;
     outline: 1px solid rgba(0, 0, 0, 0);
     z-index: 10;
-    -webkit-transform: translateZ(0) translateX(0) rotateY(0deg);
-    transform: translateZ(0) translateX(0) rotateY(0deg);
+	.transform(translateZ(0) translateX(0) rotateY(0deg));
 }
 
 .container::after {
@@ -41,8 +35,7 @@ html, body, .perspective {
     height: 0px;
     opacity: 0;
     background: rgba(0, 0, 0, 0.2);
-    -webkit-transition: opacity 0.4s, height 0s 0.4s;
-    transition: opacity 0.4s, height 0s 0.4s;
+	.transition(opacity 0.4s, height 0s 0.4s);
 }
 
 .wrapper {
@@ -58,8 +51,7 @@ html, body, .perspective {
 
 .perspective.modalview {
     position: fixed;
-    -webkit-perspective: 1500px;
-    perspective: 1500px;
+	.perspective(1500px)
 }
 
 .modalview {
@@ -69,11 +61,10 @@ html, body, .perspective {
         width: 100%;
         height: 100%;
         cursor: pointer;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
+		.backface-visibility(hidden);
     }
     .wrapper {
-        -webkit-transform: translateZ(-1px);
+		.transform(translateZ(-1px));
     }
 }
 
@@ -96,10 +87,8 @@ html, body, .perspective {
         font-weight: 300;
         margin: 0 0 30px 0;
         color: #fff;
-        -webkit-transition: color 0.3s;
-        transition: color 0.3s;
-        -webkit-transform-style: preserve-3d;
-        transform-style: preserve-3d;
+		.transition(color 0.3s);
+		.transform-style(preserve-3d);
     }
     a:hover {
         color: #ffdccd;
@@ -116,8 +105,7 @@ html, body, .perspective {
         margin-right: 10px;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
+		.backface-visibility(hidden);
     }
 }
 
@@ -160,67 +148,31 @@ html, body, .perspective {
     bottom: 25%;
 }
 
-.icon-news::before {
-    content: "\e600";
-}
-
-.icon-home::before {
-    content: "\e601";
-}
-
-.icon-image::before {
-    content: "\e602";
-}
-
-.icon-upload::before {
-    content: "\e603";
-}
-
-.icon-star::before {
-    content: "\e604";
-}
-
-.icon-mail::before {
-    content: "\e605";
-}
-
-.icon-lock::before {
-    content: "\e606";
-}
-
-.icon-chart-pie::before {
-    content: "\e607";
-}
 
 .effect-airbnb {
     background: #b8b6b4;
     .container {
-        -webkit-transition: -webkit-transform 0.4s;
-        transition: transform 0.4s;
-        -webkit-transform-origin: 50% 50%;
-        transform-origin: 50% 50%;
+		.transition(transform 0.4s);
+		.transform-origin(50% 50%);
     }
     .outer-nav {
         a {
             opacity: 0;
             -webkit-transform: translateX(-150px);
             transform: translateX(-150px);
-            -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
-            transition: transform 0.4s, opacity 0.4s;
+			.transition(transform 0.4s, opacity 0.4s);
         }
     }
 }
 
 .effect-airbnb.animate {
     .container {
-        -webkit-transform: translateZ(-1500px) translateX(100%) rotateY(-45deg);
-        transform: translateZ(-1500px) translateX(100%) rotateY(-45deg);
+		.transform(translateZ(-1500px) translateX(100%) rotateY(-45deg));
     }
     .outer-nav {
         a {
             opacity: 1;
-            -webkit-transform: translateX(0);
-            transform: translateX(0);
+            .transform(translateX(0));
         }
         .child-increasing-transition-delay(2,7,0.04, 0.04);
 
@@ -263,9 +215,8 @@ html, body, .perspective {
 .effect-moveleft {
     background: #f4f3f1;
     .container {
-        -webkit-transition: -webkit-transform 0.4s;
-        transition: transform 0.4s;
-        -webkit-transform-origin: 50% 50%;
+		.transition(transform 0.4s);
+		-webkit-transform-origin: 50% 50%;
         transform-origin: 50% 50%;
     }
     .container::after {
@@ -275,11 +226,9 @@ html, body, .perspective {
         a {
             color: #e86a32;
             opacity: 0;
-            -webkit-transform: translateX(100px) translateZ(-1000px);
-            transform: translateX(100px) translateZ(-1000px);
-            -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
-            transition: transform 0.4s, opacity 0.4s;
-        }
+			.transform(translateX(100px) translateZ(-1000px));
+			.transition(transform 0.4s, opacity 0.4s);
+		}
         a:hover {
             color: #333;
         }
@@ -289,7 +238,7 @@ html, body, .perspective {
 .effect-moveleft.animate {
     .container {
         -webkit-transform: translateX(-50%) rotateY(45deg) translateZ(-50px);
-        transform: translateX(-50%) rotateY(45deg) translateZ(-50px);
+        transform: translateX(-50%) rotateY(-45deg) translateZ(-50px);
     }
     .outer-nav {
         a {
@@ -304,8 +253,8 @@ html, body, .perspective {
 .effect-rotateleft {
     background: #e96e4f;
     .container {
-        -webkit-transition: -webkit-transform 0.4s;
-        transition: transform 0.4s;
+		.transition(transform 0.4s);
+
         -webkit-transform-origin: 0% 50%;
         transform-origin: 0% 50%;
     }
@@ -317,9 +266,8 @@ html, body, .perspective {
             opacity: 0;
             -webkit-transform: translateX(350px) translateZ(-1000px);
             transform: translateX(350px) translateZ(-1000px);
-            -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
-            transition: transform 0.4s, opacity 0.4s;
-        }
+			.transition(transform 0.4s, opacity 0.4s);
+		}
     }
 }
 
@@ -341,8 +289,8 @@ html, body, .perspective {
 .effect-movedown {
     background: #34495e;
     .container {
-        -webkit-transition: -webkit-transform 0.4s;
-        transition: transform 0.4s;
+		.transition(transform 0.4s);
+
         -webkit-transform-origin: 50% 50%;
         transform-origin: 50% 50%;
     }
@@ -354,8 +302,7 @@ html, body, .perspective {
             opacity: 0;
             -webkit-transform: translateY(-20px);
             transform: translateY(-20px);
-            -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
-            transition: transform 0.4s, opacity 0.4s;
+			.transition(transform 0.4s, opacity 0.4s);
         }
         a:hover {
             color: #ed8151;
@@ -381,8 +328,8 @@ html, body, .perspective {
 .effect-rotatetop {
     background: #edcdbb;
     .container {
-        -webkit-transition: -webkit-transform 0.4s;
-        transition: transform 0.4s;
+		.transition(transform 0.4s);
+
         -webkit-transform-origin: 50% 50%;
         transform-origin: 50% 50%;
     }
@@ -395,8 +342,8 @@ html, body, .perspective {
             color: #ed8151;
             -webkit-transform: translateY(200px) translateZ(-1000px);
             transform: translateY(200px) translateZ(-1000px);
-            -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
-            transition: transform 0.4s, opacity 0.4s;
+			.transition(transform 0.4s, opacity 0.4s);
+
         }
         a:hover {
             color: #777;
@@ -422,8 +369,8 @@ html, body, .perspective {
 .effect-laydown {
     background: #b8b6b4;
     .container {
-        -webkit-transition: -webkit-transform 0.4s;
-        transition: transform 0.4s;
+		.transition(transform 0.4s);
+
         -webkit-transform-origin: 50% 150%;
         transform-origin: 50% 150%;
     }
@@ -432,8 +379,8 @@ html, body, .perspective {
             opacity: 0;
             -webkit-transform: translateY(-200px) translateZ(-1000px);
             transform: translateY(-200px) translateZ(-1000px);
-            -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
-            transition: transform 0.4s, opacity 0.4s;
+			.transition(transform 0.4s, opacity 0.4s);
+
         }
     }
 }

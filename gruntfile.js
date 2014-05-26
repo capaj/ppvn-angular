@@ -7,8 +7,8 @@ module.exports = function(grunt) {
         connect: {
             dev: {
                 options: {
-                    port: 9001,
-                    livereload: 9002,
+                    port: 10001,
+                    livereload: 10002,
                     keepalive: true
                 }
             }
@@ -23,8 +23,13 @@ module.exports = function(grunt) {
             }
         },
         less: {
-            src: '',
-            dest: './css/ppvn-angular'
+			development: {
+				files: {
+					'./css/ppvn-angular.css': "./less/ppvn-angular.less"
+				}
+			}
+//            src: './less/ppvn-angular.less',
+//            dest: './css/ppvn-angular.css'
         },
         ngAnnotate: {
             app: {
@@ -34,7 +39,7 @@ module.exports = function(grunt) {
         },
         watch: {
             options: {
-                livereload: 9002
+                livereload: 10002
             },
             files: ['./**/*.html', './**/*.css'],
             JSSources: {
@@ -42,8 +47,8 @@ module.exports = function(grunt) {
                 tasks: []
             },
             less: {
-                files: 'public/less/**/*.less',
-                tasks: ['less' + env]
+                files: './less/**/*.less',
+                tasks: ['less']
             }
 
         }
