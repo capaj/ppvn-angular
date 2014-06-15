@@ -18,23 +18,21 @@ module.exports = function(grunt) {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             build: {
-                src: 'src/<%= pkg.name %>.js',
-                dest: 'build/<%= pkg.name %>.min.js'
+                src: './dist/<%= pkg.name %>.annotated.js',
+                dest: 'dist/<%= pkg.name %>.min.js'
             }
         },
         less: {
 			development: {
 				files: {
-					'./css/ppvn-angular.css': "./less/ppvn-angular.less"
+					'./dist/ppvn-angular.css': "./less/ppvn-angular.less"
 				}
 			}
-//            src: './less/ppvn-angular.less',
-//            dest: './css/ppvn-angular.css'
         },
         ngAnnotate: {
             app: {
-                src: '',
-                dest: ''
+                src: './dist/<%= pkg.name %>.js',
+                dest: './dist/<%= pkg.name %>.annotated.js'
             }
         },
         watch: {
@@ -51,6 +49,15 @@ module.exports = function(grunt) {
                 tasks: ['less']
             }
 
+        },
+        concat: {
+            options: {
+                banner: '//<%= pkg.name %> version <%= pkg.version %> \n'
+            },
+            dist: {
+                src: ['./src/module.js', './src/*.js'],
+                dest: './dist/<%= pkg.name %>.js'
+            }
         }
 
     });
@@ -58,12 +65,16 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-ng-annotate');
+    grunt.loadNpmTasks('grunt-karma');
 
     // Default task(s).
     if (env === 'dev') {
         grunt.registerTask('default', ['connect', 'watch']);
     } else {
-        grunt.registerTask('default', ['less']);
+        grunt.registerTask('default', ['less', 'concat', 'uglify']);
     }
 
 };

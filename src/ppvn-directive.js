@@ -1,4 +1,4 @@
-angular.module('PPVN', []).directive('perspectiveViewNavigation', function () {
+angular.module('PPVN').directive('perspectiveViewNavigation', function () {
     var effect;
     return {
         controller: function() {
