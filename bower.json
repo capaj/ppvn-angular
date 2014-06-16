@@ -1,22 +1,39 @@
 {
-    "name": "ppvn-angular",
-    "version": "0.1.0",
-    "dependencies": {
-        "angular": "1.2.17"
-    },
-    "authors": [
-        { "name": "Jiří Špác", "email": "capajj@gmail.com" }
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/capaj/ppvn-angular.git"
-    },
-    "devDependencies": {
-        "angular-mocks": "1.2.17"
-    },
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "components"
-    ]
+  "name": "ppvn-angular",
+  "version": "0.1.0",
+  "dependencies": {
+    "angular": "1.2.17"
+  },
+  "authors": [
+	  { "name": "Jiří Špác", "email": "capajj@gmail.com" },
+	  { "name": "Manoela Ilic", "homepage": "https://github.com/crnacura" }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/capaj/ppvn-angular.git"
+  },
+  "devDependencies": {
+    "angular-mocks": "1.2.17"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "keywords": [
+    "angular",
+    "perspective",
+    "view",
+    "navigation",
+    "codrops",
+    "mary",
+    "lou"
+  ],
+  "license": "http://tympanus.net/codrops/licensing/",
+  "homepage": "https://github.com/capaj/ppvn-angular",
+  "description": "Perspective view navigation introduced here https://github.com/codrops/PerspectivePageViewNavigation ported to angular",
+  "main": "dist/ppvn-angular.min.js"
 }
