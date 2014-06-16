@@ -15,7 +15,7 @@ module.exports = function(grunt) {
         },
         uglify: {
             options: {
-                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+                banner: '//<%= pkg.name %> version <%= pkg.version %> \n'
             },
             build: {
                 src: './dist/<%= pkg.name %>.annotated.js',
@@ -71,10 +71,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-karma');
 
     // Default task(s).
-    if (env === 'dev') {
-        grunt.registerTask('default', ['connect', 'watch']);
-    } else {
-        grunt.registerTask('default', ['less', 'concat', 'uglify']);
-    }
+	grunt.registerTask('dev', ['connect', 'watch']);
+	grunt.registerTask('default', ['less', 'concat', 'ngAnnotate', 'uglify']);
+
 
 };
