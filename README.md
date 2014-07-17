@@ -1,5 +1,4 @@
 ##Perspective Page View Navigation - Angular directives version
-=========
 
 Some effects for a perspective page view navigation where the page itself gets pushed away in 3D to reveal a menu or other items.
 
