@@ -16,6 +16,8 @@ Needed HTML structure:
 		</div>
 	</body>
 	
+####[Demo](http://capaj.github.io/ppvn-angular/)
+
 ###Predefined effects:
 - airbnb
 - moveleft
@@ -28,7 +30,7 @@ You can tweak those in less/ppvn-angular.less.
 
 [Article on Codrops](http://tympanus.net/codrops/?p=17915)
 
-[Demo](http://tympanus.net/Development/PerspectivePageViewNavigation/)
+[Original Demo(Non Angular)](http://tympanus.net/Development/PerspectivePageViewNavigation/)
 
 Integrate or build upon it for free in your personal or commercial projects. Don't republish, redistribute or sell "as-is".
 
