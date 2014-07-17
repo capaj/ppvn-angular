@@ -4,7 +4,8 @@ angular.module('PPVN').directive('perspectiveViewNavigation', function () {
     var effect;
     return {
         controller: function() {
-            this.effect = 'effect-' + effect;
+            this.effect = effect;
+            this.effectClass = 'effect-' + effect;
             this.menuShown = false;
         },
         compile: function (el, attrs) {
@@ -17,12 +18,26 @@ angular.module('PPVN').directive('perspectiveViewNavigation', function () {
         }
     };
 }).directive('perspectiveViewMenu', function () {
-    return {
+	var rv = 'right vertical';
+	var th = 'top horizontal';
+
+	var menuClasses = {
+		airbnb: 'left vertical',
+		moveleft: rv,
+		rotateleft: rv,
+		movedown: th,
+		laydown: th,
+		rotatetop: 'bottom horizontal'
+	};
+
+	return {
         restrict: 'EA',
         require: '^perspectiveViewNavigation',
         link: function (scope, el, attrs, ppvnController) {
-            el.addClass(ppvnController.effect);
-            ppvnController.addClassToMenu = function (cl) {
+            el.addClass(ppvnController.effectClass);
+            el.find('nav').addClass(menuClasses[ppvnController.effect]);
+
+			ppvnController.addClassToMenu = function (cl) {
                 return el.addClass(cl);
             };
             ppvnController.removeClassOnMenu = function (cl) {
@@ -73,7 +88,7 @@ angular.module('PPVN').directive('perspectiveViewNavigation', function () {
         template: '<div class="container"><div class="wrapper" ng-transclude></div>',
         link: function (scope, el, attrs, ppvnController) {
             el.addClass('perspective');
-            el.addClass(ppvnController.effect);
+            el.addClass(ppvnController.effectClass);
 
             var perspectiveWrapper = el[0];
             var container = getFirstChild(el);

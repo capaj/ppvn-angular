@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="css/demo.css"/>
     <link rel="stylesheet" type="text/css" href="dist/ppvn-angular.css"/>
 </head>
-<body perspective-view-navigation="moveleft">
+<body perspective-view-navigation="laydown">
     <div perspective-view>
         <!-- Top Navigation -->
         <div class="codrops-top clearfix">
@@ -33,11 +33,11 @@
             <div class="column">
                 <nav class="codrops-demos">
                     <a href="index.html">Airbnb Effect</a>
-                    <a href="index2.html" class="current-demo">Move Left</a>
+                    <a href="index2.html" >Move Left</a>
                     <a href="index3.html">Rotate Left</a>
                     <a href="index4.html">Move Down</a>
                     <a href="index5.html">Rotate Top</a>
-                    <a href="index6.html">Lay Down</a>
+                    <a href="index6.html" class="current-demo">Lay Down</a>
                 </nav>
             </div>
             <div class="related">
@@ -54,7 +54,7 @@
     </div>
     <!-- /perspective -->
     <div perspective-view-menu>
-        <nav class="outer-nav right vertical">
+        <nav class="outer-nav">
             <a href="/home" class="icon-home">Home</a>
             <a href="/news" class="icon-news">News</a>
             <a href="/image" class="icon-image">Images</a>
@@ -70,7 +70,7 @@
     <script src="src/module.js"></script>
     <script src="src/ppvn-directive.js"></script>
     <script src="src/ppvn-modernizr.js"></script>
-	<!--user apps need to include just minified file-->
+	<!--user apps need to include just minified file, these 3 are for development-->
 	<!--<script src="dist/ppvn-angular.min.js"></script>-->
 </body>
 </html>
