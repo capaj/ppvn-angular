@@ -1,4 +1,4 @@
-Perspective Page View Navigation - Angular directives version
+##Perspective Page View Navigation - Angular directives version
 =========
 
 Some effects for a perspective page view navigation where the page itself gets pushed away in 3D to reveal a menu or other items.
@@ -16,13 +16,13 @@ Needed HTML structure:
 		</div>
 	</body>
 	
-Predefined effects:
-	-airbnb
-	-moveleft
-	-rotateleft
-	-movedown
-	-laydown
-	-rotatetop
+###Predefined effects:
+- airbnb
+- moveleft
+- rotateleft
+- movedown
+- laydown
+- rotatetop
 
 You can tweak those in less/ppvn-angular.less.
 
