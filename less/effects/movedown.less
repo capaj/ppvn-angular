@@ -1,0 +1,38 @@
+.effect-movedown {
+    background: #34495e;
+    .container {
+        .transition(transform 0.4s);
+
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+    }
+    .container::after {
+        background: rgba(52, 73, 94, 0.5);
+    }
+    .outer-nav {
+        a {
+            opacity: 0;
+            -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+            .transition(transform 0.4s, opacity 0.4s);
+        }
+        a:hover {
+            color: #ed8151;
+        }
+    }
+}
+
+.effect-movedown.animate {
+    .container {
+        -webkit-transform: translateY(100%) translateZ(-1500px);
+        transform: translateY(100%) translateZ(-1500px);
+    }
+    .outer-nav {
+        a {
+            opacity: 1;
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+        .child-increasing-transition-delay(2,7,0.04, 0.04);
+    }
+}

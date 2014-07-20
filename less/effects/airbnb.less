@@ -1,0 +1,29 @@
+.effect-airbnb {
+    background: #b8b6b4;
+    .container {
+        .transition(transform 0.4s);
+        .transform-origin(50% 50%);
+    }
+    .outer-nav {
+        a {
+            opacity: 0;
+            -webkit-transform: translateX(-150px);
+            transform: translateX(-150px);
+            .transition(transform 0.4s, opacity 0.4s);
+        }
+    }
+}
+
+.effect-airbnb.animate {
+    .container {
+        .transform(translateZ(-1500px) translateX(100%) rotateY(-45deg));
+    }
+    .outer-nav {
+        a {
+            opacity: 1;
+            .transform(translateX(0));
+        }
+        .child-increasing-transition-delay(2,7,0.04, 0.04);
+
+    }
+}

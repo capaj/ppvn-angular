@@ -1,0 +1,40 @@
+.effect-rotatetop {
+    background: #edcdbb;
+    .container {
+        .transition(transform 0.4s);
+
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+    }
+    .container::after {
+        background: rgba(94, 59, 43, 0.6);
+    }
+    .outer-nav {
+        a {
+            opacity: 0;
+            color: #ed8151;
+            -webkit-transform: translateY(200px) translateZ(-1000px);
+            transform: translateY(200px) translateZ(-1000px);
+            .transition(transform 0.4s, opacity 0.4s);
+
+        }
+        a:hover {
+            color: #777;
+        }
+    }
+}
+
+.effect-rotatetop.animate {
+    .container {
+        -webkit-transform: translateZ(-1500px) translateY(-50%) rotateX(-45deg);
+        transform: translateZ(-1500px) translateY(-50%) rotateX(-45deg);
+    }
+    .outer-nav {
+        a {
+            opacity: 1;
+            -webkit-transform: translateY(0) translateZ(0);
+            transform: translateY(0) translateZ(0);
+        }
+        .child-increasing-transition-delay(2,7,0.04, 0.04);
+    }
+}

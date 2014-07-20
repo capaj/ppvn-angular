@@ -1,0 +1,35 @@
+.effect-rotateleft {
+    background: #e96e4f;
+    .container {
+        .transition(transform 0.4s);
+
+        -webkit-transform-origin: 0% 50%;
+        transform-origin: 0% 50%;
+    }
+    .container::after {
+        background: rgba(255, 255, 255, 0.6);
+    }
+    .outer-nav {
+        a {
+            opacity: 0;
+            -webkit-transform: translateX(350px) translateZ(-1000px);
+            transform: translateX(350px) translateZ(-1000px);
+            .transition(transform 0.4s, opacity 0.4s);
+        }
+    }
+}
+
+.effect-rotateleft.animate {
+    .container {
+        -webkit-transform: translateZ(-1800px) translateX(-50%) rotateY(45deg);
+        transform: translateZ(-1800px) translateX(-50%) rotateY(45deg);
+    }
+    .outer-nav {
+        a {
+            opacity: 1;
+            -webkit-transform: translateX(0) translateZ(0);
+            transform: translateX(0) translateZ(0);
+        }
+        .child-increasing-transition-delay(2,7,0.04, 0.04);
+    }
+}
