@@ -17,28 +17,28 @@ html, body, .perspective {
     position: relative;
 }
 
-.container {
+.ppvn-container {
     background: #fff;
     min-height: 100%;
     position: relative;
     outline: 1px solid rgba(0, 0, 0, 0);
     z-index: 10;
 	.transform(translateZ(0) translateX(0) rotateY(0deg));
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0px;
+        opacity: 0;
+        background: rgba(0, 0, 0, 0.2);
+        .transition(opacity 0.4s, height 0s 0.4s);
+    }
 }
 
-.container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 0px;
-    opacity: 0;
-    background: rgba(0, 0, 0, 0.2);
-	.transition(opacity 0.4s, height 0s 0.4s);
-}
-
-.wrapper {
+.ppvn-wrapper {
     position: relative;
 }
 
@@ -55,7 +55,7 @@ html, body, .perspective {
 }
 
 .modalview {
-    .container {
+    .ppvn-container {
         position: absolute;
         overflow: hidden;
         width: 100%;
@@ -63,13 +63,13 @@ html, body, .perspective {
         cursor: pointer;
 		.backface-visibility(hidden);
     }
-    .wrapper {
+    .ppvn-wrapper {
 		.transform(translateZ(-1px));
     }
 }
 
 .animate {
-    .container::after {
+    .ppvn-container::after {
         opacity: 1;
         height: 101%;
         -webkit-transition: opacity 0.3s;
@@ -151,32 +151,32 @@ html, body, .perspective {
 
 .no-csstransforms3d {
     .effect-airbnb.animate {
-        .container {
+        .ppvn-container {
             left: 75%;
         }
     }
     .effect-moveleft.animate {
-        .container {
+        .ppvn-container {
             left: -75%;
         }
     }
     .effect-rotateleft.animate {
-        .container {
+        .ppvn-container {
             left: -75%;
         }
     }
     .effect-movedown.animate {
-        .container {
+        .ppvn-container {
             top: 75%;
         }
     }
     .effect-rotatetop.animate {
-        .container {
+        .ppvn-container {
             top: -75%;
         }
     }
     .effect-laydown.animate {
-        .container {
+        .ppvn-container {
             top: 75%;
         }
     }

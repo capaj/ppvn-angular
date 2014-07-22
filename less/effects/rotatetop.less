@@ -1,14 +1,16 @@
 .effect-rotatetop {
     background: #edcdbb;
-    .container {
+    .ppvn-container {
         .transition(transform 0.4s);
 
         -webkit-transform-origin: 50% 50%;
         transform-origin: 50% 50%;
+
+        &::after {
+            background: rgba(94, 59, 43, 0.6);
+        }
     }
-    .container::after {
-        background: rgba(94, 59, 43, 0.6);
-    }
+
     .outer-nav {
         a {
             opacity: 0;
@@ -25,7 +27,7 @@
 }
 
 .effect-rotatetop.animate {
-    .container {
+    .ppvn-container {
         -webkit-transform: translateZ(-1500px) translateY(-50%) rotateX(-45deg);
         transform: translateZ(-1500px) translateY(-50%) rotateX(-45deg);
     }

@@ -1,6 +1,6 @@
 {
   "name": "ppvn-angular",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "dependencies": {
     "angular": "1.2.20"
   },
@@ -20,6 +20,7 @@
     "node_modules",
     "components",
     "bower_components",
+    ".idea",
     "test",
     "tests"
   ],

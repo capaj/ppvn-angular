@@ -1,6 +1,6 @@
 {
     "name": "ppvn-angular",
-    "version": "0.1.0",
+    "version": "0.3.0",
     "private": false,
     "author": "capaj <capajj@gmail.com>",
     "description": "syntactic sugar angular directives for PerspectivePageViewNavigation",
@@ -19,11 +19,11 @@
         "grunt-contrib-less": "~0.11",
         "grunt-contrib-connect": "~0.8",
         "grunt-contrib-clean": "~0.5",
-        "grunt-contrib-concat": "~0.4",
+        "grunt-contrib-concat": "~0.5",
         "grunt-contrib-copy": "~0.5",
         "grunt-contrib-uglify": "~0.5",
         "grunt-contrib-watch": "~0.6",
         "grunt-karma": "~0.8",
-        "grunt-ng-annotate": "~0.2"
+        "grunt-ng-annotate": "~0.3"
     }
 }

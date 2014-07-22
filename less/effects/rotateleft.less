@@ -1,14 +1,16 @@
 .effect-rotateleft {
     background: #e96e4f;
-    .container {
+    .ppvn-container {
         .transition(transform 0.4s);
 
         -webkit-transform-origin: 0% 50%;
         transform-origin: 0% 50%;
+
+        &::after {
+            background: rgba(255, 255, 255, 0.6);
+        }
     }
-    .container::after {
-        background: rgba(255, 255, 255, 0.6);
-    }
+
     .outer-nav {
         a {
             opacity: 0;
@@ -20,7 +22,7 @@
 }
 
 .effect-rotateleft.animate {
-    .container {
+    .ppvn-container {
         -webkit-transform: translateZ(-1800px) translateX(-50%) rotateY(45deg);
         transform: translateZ(-1800px) translateX(-50%) rotateY(45deg);
     }

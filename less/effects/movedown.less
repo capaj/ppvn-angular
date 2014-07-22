@@ -1,13 +1,13 @@
 .effect-movedown {
     background: #34495e;
-    .container {
+    .ppvn-container {
         .transition(transform 0.4s);
 
         -webkit-transform-origin: 50% 50%;
         transform-origin: 50% 50%;
-    }
-    .container::after {
-        background: rgba(52, 73, 94, 0.5);
+        &::after{
+            background: rgba(52, 73, 94, 0.5);
+        }
     }
     .outer-nav {
         a {
@@ -23,7 +23,7 @@
 }
 
 .effect-movedown.animate {
-    .container {
+    .ppvn-container {
         -webkit-transform: translateY(100%) translateZ(-1500px);
         transform: translateY(100%) translateZ(-1500px);
     }

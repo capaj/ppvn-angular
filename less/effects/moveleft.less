@@ -1,13 +1,15 @@
 .effect-moveleft {
     background: #f4f3f1;
-    .container {
+    .ppvn-container {
         .transition(transform 0.4s);
         -webkit-transform-origin: 50% 50%;
         transform-origin: 50% 50%;
+
+        &::after{
+            background: rgba(255, 255, 255, 0.6);
+        }
     }
-    .container::after {
-        background: rgba(255, 255, 255, 0.6);
-    }
+
     .outer-nav {
         a {
             color: #e86a32;
@@ -22,7 +24,7 @@
 }
 
 .effect-moveleft.animate {
-    .container {
+    .ppvn-container {
         -webkit-transform: translateX(-50%) rotateY(45deg) translateZ(-50px);
         transform: translateX(-50%) rotateY(45deg) translateZ(-50px);
     }

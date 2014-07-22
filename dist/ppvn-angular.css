@@ -8,7 +8,7 @@ body,
   background: #aaa;
   position: relative;
 }
-.container {
+.ppvn-container {
   background: #fff;
   min-height: 100%;
   position: relative;
@@ -20,7 +20,7 @@ body,
   -ms-transform: translateZ(0px) translateX(0) rotateY(0deg);
   transform: translateZ(0px) translateX(0) rotateY(0deg);
 }
-.container::after {
+.ppvn-container::after {
   content: '';
   position: absolute;
   top: 0;
@@ -34,7 +34,7 @@ body,
   -o-transition: opacity 0.4s, height 0s 0.4s;
   transition: opacity 0.4s, height 0s 0.4s;
 }
-.wrapper {
+.ppvn-wrapper {
   position: relative;
 }
 .component {
@@ -49,7 +49,7 @@ body,
   -moz-perspective: 1500px;
   perspective: 1500px;
 }
-.modalview .container {
+.modalview .ppvn-container {
   position: absolute;
   overflow: hidden;
   width: 100%;
@@ -61,14 +61,14 @@ body,
   -ms-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-.modalview .wrapper {
+.modalview .ppvn-wrapper {
   -webkit-transform: translateZ(-1px);
   -moz-transform: translateZ(-1px);
   -o-transform: translateZ(-1px);
   -ms-transform: translateZ(-1px);
   transform: translateZ(-1px);
 }
-.animate .container::after {
+.animate .ppvn-container::after {
   opacity: 1;
   height: 101%;
   -webkit-transition: opacity 0.3s;
@@ -149,28 +149,28 @@ body,
 .outer-nav.bottom {
   bottom: 25%;
 }
-.no-csstransforms3d .effect-airbnb.animate .container {
+.no-csstransforms3d .effect-airbnb.animate .ppvn-container {
   left: 75%;
 }
-.no-csstransforms3d .effect-moveleft.animate .container {
+.no-csstransforms3d .effect-moveleft.animate .ppvn-container {
   left: -75%;
 }
-.no-csstransforms3d .effect-rotateleft.animate .container {
+.no-csstransforms3d .effect-rotateleft.animate .ppvn-container {
   left: -75%;
 }
-.no-csstransforms3d .effect-movedown.animate .container {
+.no-csstransforms3d .effect-movedown.animate .ppvn-container {
   top: 75%;
 }
-.no-csstransforms3d .effect-rotatetop.animate .container {
+.no-csstransforms3d .effect-rotatetop.animate .ppvn-container {
   top: -75%;
 }
-.no-csstransforms3d .effect-laydown.animate .container {
+.no-csstransforms3d .effect-laydown.animate .ppvn-container {
   top: 75%;
 }
 .effect-airbnb {
   background: #b8b6b4;
 }
-.effect-airbnb .container {
+.effect-airbnb .ppvn-container {
   -webkit-transition: -webkit-transform 0.4s;
   -moz-transition: -moz-transform 0.4s;
   -o-transition: -o-transform 0.4s;
@@ -190,7 +190,7 @@ body,
   -o-transition: -o-transform 0.4s, opacity 0.4s;
   transition: -webkit-transform 0.4s,-moz-transform 0.4s,-o-transform 0.4s,transform 0.4s, opacity 0.4s;
 }
-.effect-airbnb.animate .container {
+.effect-airbnb.animate .ppvn-container {
   -webkit-transform: translateZ(-1500px) translateX(100%) rotateY(-45deg);
   -moz-transform: translateZ(-1500px) translateX(100%) rotateY(-45deg);
   -o-transform: translateZ(-1500px) translateX(100%) rotateY(-45deg);
@@ -244,7 +244,7 @@ body,
 .effect-laydown {
   background: #b8b6b4;
 }
-.effect-laydown .container {
+.effect-laydown .ppvn-container {
   -webkit-transition: -webkit-transform 0.4s;
   -moz-transition: -moz-transform 0.4s;
   -o-transition: -o-transform 0.4s;
@@ -261,7 +261,7 @@ body,
   -o-transition: -o-transform 0.4s, opacity 0.4s;
   transition: -webkit-transform 0.4s,-moz-transform 0.4s,-o-transform 0.4s,transform 0.4s, opacity 0.4s;
 }
-.effect-laydown.animate .container {
+.effect-laydown.animate .ppvn-container {
   -webkit-transform: translateZ(-1500px) rotateX(80deg);
   transform: translateZ(-1500px) rotateX(80deg);
 }
@@ -301,7 +301,7 @@ body,
 .effect-movedown {
   background: #34495e;
 }
-.effect-movedown .container {
+.effect-movedown .ppvn-container {
   -webkit-transition: -webkit-transform 0.4s;
   -moz-transition: -moz-transform 0.4s;
   -o-transition: -o-transform 0.4s;
@@ -309,7 +309,7 @@ body,
   -webkit-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
 }
-.effect-movedown .container::after {
+.effect-movedown .ppvn-container::after {
   background: rgba(52, 73, 94, 0.5);
 }
 .effect-movedown .outer-nav a {
@@ -324,7 +324,7 @@ body,
 .effect-movedown .outer-nav a:hover {
   color: #ed8151;
 }
-.effect-movedown.animate .container {
+.effect-movedown.animate .ppvn-container {
   -webkit-transform: translateY(100%) translateZ(-1500px);
   transform: translateY(100%) translateZ(-1500px);
 }
@@ -372,7 +372,7 @@ body,
 .effect-moveleft {
   background: #f4f3f1;
 }
-.effect-moveleft .container {
+.effect-moveleft .ppvn-container {
   -webkit-transition: -webkit-transform 0.4s;
   -moz-transition: -moz-transform 0.4s;
   -o-transition: -o-transform 0.4s;
@@ -380,7 +380,7 @@ body,
   -webkit-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
 }
-.effect-moveleft .container::after {
+.effect-moveleft .ppvn-container::after {
   background: rgba(255, 255, 255, 0.6);
 }
 .effect-moveleft .outer-nav a {
@@ -399,7 +399,7 @@ body,
 .effect-moveleft .outer-nav a:hover {
   color: #333;
 }
-.effect-moveleft.animate .container {
+.effect-moveleft.animate .ppvn-container {
   -webkit-transform: translateX(-50%) rotateY(45deg) translateZ(-50px);
   transform: translateX(-50%) rotateY(45deg) translateZ(-50px);
 }
@@ -447,7 +447,7 @@ body,
 .effect-rotateleft {
   background: #e96e4f;
 }
-.effect-rotateleft .container {
+.effect-rotateleft .ppvn-container {
   -webkit-transition: -webkit-transform 0.4s;
   -moz-transition: -moz-transform 0.4s;
   -o-transition: -o-transform 0.4s;
@@ -455,7 +455,7 @@ body,
   -webkit-transform-origin: 0% 50%;
   transform-origin: 0% 50%;
 }
-.effect-rotateleft .container::after {
+.effect-rotateleft .ppvn-container::after {
   background: rgba(255, 255, 255, 0.6);
 }
 .effect-rotateleft .outer-nav a {
@@ -467,7 +467,7 @@ body,
   -o-transition: -o-transform 0.4s, opacity 0.4s;
   transition: -webkit-transform 0.4s,-moz-transform 0.4s,-o-transform 0.4s,transform 0.4s, opacity 0.4s;
 }
-.effect-rotateleft.animate .container {
+.effect-rotateleft.animate .ppvn-container {
   -webkit-transform: translateZ(-1800px) translateX(-50%) rotateY(45deg);
   transform: translateZ(-1800px) translateX(-50%) rotateY(45deg);
 }
@@ -515,7 +515,7 @@ body,
 .effect-rotatetop {
   background: #edcdbb;
 }
-.effect-rotatetop .container {
+.effect-rotatetop .ppvn-container {
   -webkit-transition: -webkit-transform 0.4s;
   -moz-transition: -moz-transform 0.4s;
   -o-transition: -o-transform 0.4s;
@@ -523,7 +523,7 @@ body,
   -webkit-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
 }
-.effect-rotatetop .container::after {
+.effect-rotatetop .ppvn-container::after {
   background: rgba(94, 59, 43, 0.6);
 }
 .effect-rotatetop .outer-nav a {
@@ -539,7 +539,7 @@ body,
 .effect-rotatetop .outer-nav a:hover {
   color: #777;
 }
-.effect-rotatetop.animate .container {
+.effect-rotatetop.animate .ppvn-container {
   -webkit-transform: translateZ(-1500px) translateY(-50%) rotateX(-45deg);
   transform: translateZ(-1500px) translateY(-50%) rotateX(-45deg);
 }
