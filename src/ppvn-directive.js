@@ -83,7 +83,7 @@ angular.module('PPVN').directive('perspectiveViewNavigation', function () {
         restrict: 'EA',
         transclude: true,
         require: '^perspectiveViewNavigation',
-        template: '<div class="ppvn-container"><div class="ppvn-wrapper" ng-transclude></div>',
+        template: '<div class="ppvn-container" ng-click="hideMenu()"><div class="ppvn-wrapper" ng-transclude></div>',
         link: function (scope, el, attrs, ppvnController) {
             el.addClass('perspective');
             el.addClass(ppvnController.effectClass);
@@ -92,7 +92,7 @@ angular.module('PPVN').directive('perspectiveViewNavigation', function () {
             var container = getFirstChild(el);
             var contentWrapper = getFirstChild(el.children());
 
-            container.addEventListener(clickevent, function (ev) {
+            scope.hideMenu = function (ev) {
                 if (ppvnController.menuShown) {
                     var onEndTransFn = function (ev) {
                         if (support && ( ev.target.className !== 'ppvn-container' || ev.propertyName.indexOf('transform') == -1 )) return;
@@ -119,7 +119,7 @@ angular.module('PPVN').directive('perspectiveViewNavigation', function () {
 
 
                 }
-            });
+            };
 
             scope.showMenu = function () {
                 docscroll = scrollY();
@@ -139,6 +139,14 @@ angular.module('PPVN').directive('perspectiveViewNavigation', function () {
                     ppvnController.menuShown = true;
                 }, 25);
             };
+
+            scope.toggleMenu = function () {
+                if (ppvnController.menuShown === true) {
+                    scope.hideMenu();
+                } else {
+                    scope.showMenu();
+                }
+            }
 
         }
     };

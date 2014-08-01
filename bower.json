@@ -1,8 +1,8 @@
 {
   "name": "ppvn-angular",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "dependencies": {
-    "angular": "1.2.20"
+    "angular": "1.2.21"
   },
   "authors": [
 	  { "name": "Jiří Špác", "email": "capajj@gmail.com" },
@@ -13,7 +13,7 @@
     "url": "https://github.com/capaj/ppvn-angular.git"
   },
   "devDependencies": {
-    "angular-mocks": "1.2.20"
+    "angular-mocks": "1.2.21"
   },
   "ignore": [
     "**/.*",
