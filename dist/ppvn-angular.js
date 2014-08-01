@@ -1,4 +1,4 @@
-//ppvn-angular version 0.3.0 
+//ppvn-angular version 0.4.0 
 angular.module('PPVN', []);
 angular.module('PPVN').directive('perspectiveViewNavigation', function () {
     var effect;

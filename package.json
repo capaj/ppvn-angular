@@ -1,6 +1,6 @@
 {
     "name": "ppvn-angular",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "private": false,
     "author": "capaj <capajj@gmail.com>",
     "description": "syntactic sugar angular directives for PerspectivePageViewNavigation",
